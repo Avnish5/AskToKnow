@@ -1,0 +1,59 @@
+<div class=""><!DOCTYPE html></div>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon shortcut icon" type="image/x-icon" href="https://thpianost.avahan.net//img/logo/favicon.ico"/>
+    <title>AskToKnow</title>
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css" integrity="sha512-NXUhxhkDgZYOMjaIgd89zF2w51Mub53Ru3zCNp5LTlEzMbNNAjTjDbpURYGS5Mop2cU4b7re1nOIucsVlrx9fA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.js" integrity="sha512-mgZL3SZ/vIooDg2mU2amX6NysMlthFl/jDbscSRgF/k3zmICLe6muAs7YbITZ+61FeUoo1plofYAocoR5Sa1rQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <%- style %>
+</head>
+<body>
+
+<%-include('header')%>
+
+<%- body%>
+
+<%- include('footer') %>
+
+<%- script %> 
+
+<script>
+    <%if(flash.success&&flash.success.length>0){%>
+        new Noty({
+        theme:'bootstrap-v3',
+        type:'success',
+        text:'<%=flash.success%>',
+        layout:'topRight',
+        timeout:'1500',
+        type:'success',
+        
+
+    }).show();
+    <%}%>
+
+    <%if(flash.error&&flash.error.length>0){%>
+        new Noty({
+        theme:'bootstrap-v3',
+        type:'error',
+        text:'<%=flash.error%>',
+        layout:'topRight',
+        timeout:'1500',
+       
+        
+
+    }).show();
+    <%}%>
+
+
+    
+
+
+ 
+</script>
+</body>
+</html>

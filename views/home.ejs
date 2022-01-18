@@ -1,0 +1,39 @@
+<h1>home</h1>
+
+
+
+
+<%if(locals.user){%>
+   
+   <div class="questions">
+    <%for(i of question){%>
+
+        <p><li>Question-<%=i.question%>
+        
+        </li>
+        Post by-<%=i.user.name%></p>
+        
+    
+        <form method="post" action="/answer/create">
+            <input placeholder="add the answer" name="answer">
+            <input type="hidden" name="question" value="<%=i._id%>">
+            <button type="submit">Add the answer</button>
+        </form>
+
+        <%for( j of i.answer){%>
+         <li><%=j.answer%></li>
+         <snmall><%=j.user.name%></snmall>
+         
+
+
+            <%}%>
+
+        <%}%>
+        
+
+    
+
+   
+   </div>
+   <%}%>
+

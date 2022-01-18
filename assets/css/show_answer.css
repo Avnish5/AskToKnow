@@ -1,0 +1,184 @@
+/*  common flex class  */
+.common-flex{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+  /* div having the class name="show-answer-main-container"   */
+  .show-answer-main-container{
+    margin:0;
+    padding:0;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 100vh;
+    width:100%;
+    background-color: #eff5fe;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  
+  /* div having class name="show-answer"   */
+  .show-answer{
+    border: 2px solid #ebf2f7;
+    border-radius:8px;
+    padding:22px;
+    width:50%;
+    background: #fff;
+      border-radius: 6px;
+    
+  }
+  
+  .user-details{
+    display:flex;
+    align-items: center;
+   
+    
+  }
+  
+  .user-details p{
+    color: #000;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    margin-left: 4px;
+  
+    
+   
+  }
+  
+  .user-details img{
+    width:30px;
+    height:30px;
+  }
+  
+  /* div having class name="common-button */
+  .common-button button{
+    background-color: #4fb3f6;
+    color:white;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 20px;
+    cursor:pointer;
+    margin-top:1rem;
+    text-align:justify;
+   
+    
+  
+  }
+  
+  .common-button button:hover{
+    background-color: #0089e3;
+  }
+  
+  
+  /* form */
+  .show-answer form{
+    border-top: 2px solid #ebf2f7;
+    
+    margin-top:1rem;
+  
+  }
+  
+  .show-answer form textarea{
+    background: #ebf2f7;
+    border: 2px solid #ebf2f7;
+    border-radius: 20px;
+    padding:6px 16px;
+    
+    font-size: 16px;
+    width:90%;
+    margin-top:1rem;
+    height:140px;
+  }
+  
+  .show-answer form input:hover{
+    background-color: #e3ebf2;
+  }
+  
+  
+  /* media queries */
+  
+  @media screen and (max-width: 950px) {
+    .show-answer{
+        width:90%;
+      
+  }
+  }
+  
+  
+  
+  /* div which is going to displayingg the answers of the current question */
+  .answers-by-users{
+   
+    margin-top:2rem;
+    margin-left:2rem;
+    
+    padding:1rem;
+    
+  }
+  
+  .answers-by-users-content {
+    border-left: 2px solid #edeff1;
+    padding:2rem;
+    
+  }
+  
+  .answers-by-users-content p{
+    
+    text-align: left;
+    line-height:20px;
+    word-spacing:4px;
+    
+  }
+
+  .unique{
+      margin-top: 3rem;
+      
+      
+  }
+
+  #gone{
+      display: 'none';
+  }
+
+  .no-answer{
+      flex-direction: column;
+  }
+.no-answer img{
+    height:200px;
+    width:200px;
+}
+.no-answer p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  
+  
+.fa-trash-alt{
+  font-size:1.5rem;
+  cursor: pointer;
+  
+}
+
+.delete-icon{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.delete-icon a{
+  text-decoration: none;
+  color: #000;
+}

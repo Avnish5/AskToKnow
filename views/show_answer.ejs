@@ -1,0 +1,153 @@
+<link rel="stylesheet" href="/css/show_answer.css">
+
+<!--Div for the show-answer-main-container -->
+<div class="show-answer-main-container common-flex">
+
+
+  <!--Div containg the show answer-->
+  <div class="show-answer">
+
+
+    <!--Div to display user details-->
+    <div class="user-details">
+     <img src="/images/profile-image.png">
+     
+     <p><%=i.user.name%></p>
+     
+    </div>
+    
+
+
+    <!--Div to show the question-->
+    <div class="user-question">
+      <h2><%=i.question%></h2>
+
+    </div>
+    <%if(i.answer.length!=0){%>
+      <div id="go" class="common-button">
+        <button id="goes" type="submit">Hide Answers</button>
+            </div>
+
+      <%}%>
+
+  
+
+          <!--Form for adding the answer -->
+
+    <form method="post" action="/answer/createanswer">
+      <textarea type="text" name="answer"  placeholder="Add your answer" required></textarea>
+      <input type="hidden" name="question" value="<%=i._id%>">
+      <div class="common-button">
+        <button type="submit">Add The Answer</button>
+            </div>
+    </form>
+
+    <%if(i.answer.length==0){%>
+     <div class="no-answer common-flex">
+      <img src="/images/tissue.png">
+      <p>Currently there is no answer avaiable</p>
+      <p>Please add the answer.</p>
+     </div>
+
+    <%}%>
+ 
+    <div  id="gone" class="answers-by-users">
+
+     <%for(j of i.answer){%>
+      
+     <div class="unique">
+        <!--Div to display user details-->
+<div class="user-details">
+  <img src="/images/profile-image.png">
+  <%if(user.name==j.user.name){%>
+    <p>Me</p>
+    
+   
+
+    <%}else{%>
+      <p><%=j.user.name%></p>
+      
+      <%}%>
+ 
+ </div>
+
+ <!--
+   <p>
+ Posted on: <% let d=Date(j.user.createdAt);
+%>
+
+<%=d.slice(7,10)%> <%=d.slice(3,7)%>,<%=d.slice(11,15)%>
+</p>
+ -->
+
+ <div class="answers-by-users-content c">
+  
+   
+  <p><%=j.answer%></p>
+  
+   <%if(j.user.id==locals.user.id){%>
+    
+    <div class="delete-icon">
+      <a  href="/answer/delete-answer/<%=j.id%>"><i class="fas fa-trash-alt"></i></a>
+    </div>
+
+    <%}%>
+   
+ </div>
+     </div>
+
+
+      <%}%>
+
+
+
+
+
+      
+     
+
+
+    </div>
+
+
+  </div>
+
+ 
+  
+
+
+
+</div>
+<script>
+
+  const targetDiv = document.getElementById("gone");
+  const btn = document.getElementById("go");
+  btn.onclick = function () {
+    if (targetDiv.style.display !== "none") {
+      document.getElementById("goes").innerText="Show Answers";
+      targetDiv.style.display = "none";
+    } else {
+      document.getElementById("goes").innerText="Hide Answers";
+      targetDiv.style.display = "block";
+    }
+  };
+  </script>
+
+
+  
+
+  
+  
+
+
+   
+
+
+
+
+
+
+
+  
+  
+  

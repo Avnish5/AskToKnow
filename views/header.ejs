@@ -1,0 +1,57 @@
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css"  href="/css/header.css">
+<base href="/">
+<nav class="navbar">
+    <div class="logo"><img src="/images/moto.png" alt="LOGO"></div>
+    <div class="push-left">
+      <button id="menu-toggler" data-class="menu-active" class="hamburger">
+        <span class="hamburger-line hamburger-line-top"></span>
+        <span class="hamburger-line hamburger-line-middle"></span>
+        <span class="hamburger-line hamburger-line-bottom"></span>
+      </button>
+  
+     <%if(locals.user){%>
+       <!--  Menu compatible with wp_nav_menu  -->
+       <ul id="primary-menu" class="menu nav-menu">
+        <li class="menu-item current-menu-item"><a class="nav__link"  href="/question/all_questions">Home</a></li>
+        <li class="menu-item dropdown"><a class="nav__link"  href="/question/askquestion">Ask question</a>
+          
+  
+        </li>
+        <li class="menu-item dropdown"><a class="nav__link"  href="/contact-us">Contact Us</a>
+          <li class="menu-item dropdown "><a class="nav__link"  href="/profile/edit-profile">My Profile</a>
+            <li class="menu-item dropdown "><a class="nav__link"  href="/users/destroysession">Logout</a>
+          
+        </li>
+        <!--
+          <li class="menu-item dropdown "><a class="nav__link"  href="#"><%=locals.user.name%></a>
+          <ul class = "sub-nav">
+            <li><a class="sub-nav__link"  href="/profile/edit-profile">Edit My Profile</a></li>
+            <li><a class="sub-nav__link"  href="/users/destroysession">Logout</a></li>
+          
+          </ul>
+        </li>
+        -->
+      </ul>
+
+     <%}else{%>
+      <ul id="primary-menu" class="menu nav-menu">
+        
+        <li class="menu-item "><a class="nav__link"  href="/users/sign_in">Login</a>
+          <li class="menu-item "><a class="nav__link"  href="/users/sign_up">Register</a>
+          </li>
+          <li class="menu-item dropdown"><a class="nav__link"  href="/contact-us">Contact Us</a>
+            
+          </li>
+         
+        </li>
+      </ul>
+
+      <%}%>
+  
+  
+    </div>
+  </nav>
+  <script src="/js/header.js"></script>
+  

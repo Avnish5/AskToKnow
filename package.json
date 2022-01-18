@@ -1,0 +1,35 @@
+{
+  "name": "asktoknow",
+  "version": "1.0.0",
+  "description": "A question answer website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "prod_start": "NODE_ENV=production & nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.6",
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.2",
+    "json-2-csv": "^3.16.0",
+    "json2csv": "^5.0.6",
+    "kue": "^0.11.6",
+    "mongoose": "^6.1.1",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.7.2",
+    "noty": "^3.2.0-beta-deprecated",
+    "passport": "^0.5.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "rotating-file-stream": "^3.0.2"
+  }
+}

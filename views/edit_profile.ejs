@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/edit_profile.css">
+<!--Conteiner for the edit profile-->
+
+<div class="container common-flex">
+
+    <!--Div for edit profile-->
+    <div class="edit-profile">
+        <h1>Edit Your Profile</h1>
+
+        <!--Form-->
+        <form action="/profile/update-profile" method="post">
+            <li><p>Name:</p><input type="text" name="name"  value="<%=user.name%>"   required> </li>
+
+            <li><p>Email:</p><input type="email" name="email" value="<%=user.email%>"   required> </li>
+            
+            <li><p>Password:</p><input  name="password"    required> </li>
+            <button type="submit" >Save</button>
+        
+       
+      
+        </form>
+
+    
+    </div>
+</div>

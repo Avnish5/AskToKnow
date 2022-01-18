@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/contact_us.css">
+<!--Div contain the whole form and content-->
+<div class="contact-us common-flex">
+      
+    <!--Div for the content(image,heading)-->
+    <div class="contact-us-content common-flex">
+        <h3>Let's talk about everything!</h3>
+       <img src="https://preview.colorlib.com/theme/bootstrap/contact-form-16/images/undraw-contact.svg" alt="Contact-us-image">
+    </div>
+    
+    <!--Div for the form-->
+    <div class="contact-us-form">
+
+        <!--Form-->
+        <form class="common-flex" method="post" action="/contact-us/add-query" >
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Write Your Message" rows="7" cols="7" required></textarea>
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+</div>
