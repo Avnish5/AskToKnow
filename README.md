@@ -4,4 +4,4 @@ This website is based on the like quora. Here users can post or add the question
 This website is deployed on AWS and hosted on godaddy.com.
 
 You can check out the website  using the link:
-https://asktoknow.co.in
+http://asktoknow.co.in
